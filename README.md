@@ -1,72 +1,72 @@
-# Bitcoin Price Prediction Using Machine Learning
+# Dự đoán Giá Bitcoin Bằng Machine Learning
 
-## Project Overview
-This project aims to predict Bitcoin price movements using various machine learning techniques. We implement and compare multiple algorithms including Linear Regression, Decision Trees, Random Forests, Support Vector Machines, K-Nearest Neighbors, and Long Short-Term Memory (LSTM) neural networks. The project also explores the practical application of these predictions through a simulated trading strategy.
+## Tổng quan dự án
+Dự án này nhằm dự đoán biến động giá Bitcoin sử dụng các kỹ thuật toán machine learning khác nhau. Chúng tôi triển khai và so sánh nhiều thuật toán bao gồm Hồi quy tuyến tính (Linear Regression), Cây quyết định (Decision Trees), Rừng ngẫu nhiên (Random Forests), Máy vector hỗ trợ (SVM), K-láng giềng gần nhất (KNN) và mạng não LSTM (Long Short-Term Memory). Ngoài ra, dự án cũng áp dụng các dự đoán vào một chiến lược giao dịch giả lập.
 
-## Dataset
-We use historical Bitcoin price data (OHLCV - Open, High, Low, Close, Volume) from the Bitstamp exchange, containing minute-level data from 2012 onwards. For this project, we resample the data to daily intervals to reduce noise and computational requirements.
+## Dữ liệu
+Dữ liệu lịch sử giá Bitcoin (OHLCV - Open, High, Low, Close, Volume) từ sàn giao dịch Bitstamp, chứa dữ liệu theo từng phút từ năm 2012. Để giảm nhiễu và yêu cầu tính toán, chúng tôi lấy mẫu lại dữ liệu theo ngày.
 
-## Project Structure
-- `bitcoin_price_prediction.ipynb`: Main Jupyter notebook containing all code and analysis
-- `best_lstm_model.keras`: Saved LSTM model for future use
-- `requirements.txt`: Required packages to run the code
-- `data/`: Directory containing the dataset (not included due to size)
+## Cấu trúc dự án
+- `bitcoin_price_prediction.ipynb`: Notebook Jupyter chính chứa toàn bộ mã và phân tích
+- `best_lstm_model.keras`: Mô hình LSTM đã huấn luyện để sử dụng sau này
+- `requirements.txt`: Danh sách các thư viện cần thiết
+- `data/`: Thư mục chứa dữ liệu (không bao gồm do dung lượng lớn)
 
-## Features
-- **Data Analysis & Visualization**: Exploration of Bitcoin historical data with various visualizations
-- **Feature Engineering**: Creation of technical indicators (Moving Averages, RSI, MACD, etc.)
-- **Multiple ML Models**: Implementation of various machine learning approaches
-- **Deep Learning**: LSTM networks for time series forecasting
-- **Model Comparison**: Comprehensive evaluation and comparison of different models
-- **Trading Strategy**: Simulation of a simple trading strategy based on price direction predictions
-- **Future Forecasting**: Multi-day price predictions
+## Tính năng
+- **Phân tích & Tránh quan dữ liệu**: Khám phá dữ liệu lịch sử của Bitcoin với các biểu đồ trực quan
+- **Xử lý dữ liệu & Tính năng**: Tạo các chỉ báo kỹ thuật (Moving Averages, RSI, MACD, ...)
+- **Huấn luyện mô hình Machine Learning**: Triển khai các thuật toán ML khác nhau
+- **Deep Learning**: Dự đoán chuỗi thời gian bằng mạng não LSTM
+- **So sánh mô hình**: Đánh giá và so sánh hiệu suất của các mô hình
+- **Chiến lược giao dịch**: Giả lập chiến lược giao dịch dựa trên dự đoán xu hướng giá
+- **Dự đoán tương lai**: Dự đoán giá Bitcoin nhiều ngày
 
-## Installation & Setup
+## Cài đặt và thiết lập
 
-### Prerequisites
+### Yêu cầu
 - Python 3.7+
 - Jupyter Notebook/Lab
 
-### Installation
-1. Clone this repository
-2. Install required packages:
+### Cài đặt
+1. Clone repository này:
+2. Cài đặt các thư viện cần thiết:
 ```
 pip install -r requirements.txt
 ```
-3. Download the Bitcoin historical data and place it in the `data/` directory (or update the path in the notebook)
+3. Tải dữ liệu lịch sử Bitcoin và đặt vào thư mục `data/` (hoặc cập nhật đường dẫn trong notebook)
 
-### Running the Project
-1. Open the Jupyter notebook:
+### Chạy dự án
+1. Mở Jupyter notebook:
 ```
 jupyter notebook bitcoin_price_prediction.ipynb
 ```
-2. Run all cells sequentially
+2. Chạy tất cả các cell theo thứ tự
 
-## Methodology
-1. **Data Preprocessing**: Clean missing values, resample to daily frequency
-2. **Feature Engineering**: Add technical indicators and derived features
-3. **Model Training**: Train multiple models on historical data
-   - Traditional ML: Linear Regression, Decision Trees, Random Forest, SVM, KNN
-   - Deep Learning: LSTM neural networks
-4. **Evaluation**: Compare model performance using RMSE, MAE, R² for regression and accuracy, precision, recall, F1 for classification
-5. **Optimization**: Hyperparameter tuning using Grid Search with Cross-Validation
-6. **Application**: Simulate trading decisions based on price direction predictions
+## Phương pháp luận
+1. **Tiền xử lý dữ liệu**: Lọc dữ liệu, lấy mẫu lại theo ngày
+2. **Tính năng & Chỉ báo kỹ thuật**: Thêm các chỉ báo hỗ trợ dự đoán
+3. **Huấn luyện mô hình**: Dùng nhiều kỹ thuật khác nhau
+   - ML truyền thống: Hồi quy tuyến tính, Decision Trees, Random Forest, SVM, KNN
+   - Deep Learning: Mạng LSTM
+4. **Đánh giá hiệu suất**: Sử dụng RMSE, MAE, R² cho hồi quy và Accuracy, Precision, Recall, F1 cho phân loại
+5. **Tối ưu hóa**: Tinh chỉnh siêu tham số bằng Grid Search với Cross-Validation
+6. **Ứng dụng thực tế**: Giả lập quyết định giao dịch dựa trên dự đoán xu hướng giá
 
-## Results Summary
-- LSTM and Random Forest models generally achieve the best performance for price regression
-- Classification models can predict price direction with accuracy better than random guessing
-- Technical indicators provide valuable features for prediction
-- The cryptocurrency market's inherent volatility makes precise prediction challenging
-- Trading strategy simulation shows potential for profitable application
+## Kết quả
+- Mô hình LSTM và Random Forest đạt hiệu suất tốt nhất trong dự đoán giá
+- Các mô hình phân loại có thể dự đoán xu hướng giá với độ chính xác tốt hơn ngẫu nhiên
+- Các chỉ báo kỹ thuật cung cấp thông tin hữu ích cho việc dự đoán
+- Tính biến động cao của thị trường tiền điện tử khiến dự đoán chính xác trở nên khó khăn
+- Chiến lược giao dịch giả lập cho thấy tiềm năng áp dụng thực tế
 
-## Future Improvements
-- Incorporate sentiment analysis from social media and news
-- Include macroeconomic indicators and market data
-- Experiment with more advanced deep learning architectures
-- Develop more sophisticated trading strategies
-- Implement online learning to adapt to changing market conditions
+## Cải tiến trong tương lai
+- Kết hợp phân tích tâm lý từ mạng xã hội và tin tức
+- Thêm các chỉ báo kinh tế vĩ mô và dữ liệu thị trường
+- Thử nghiệm các mô hình deep learning tiến tiến hơn
+- Xây dựng các chiến lược giao dịch phức tạp hơn
+- Triển khai online learning để thích nghi động theo thị trường
 
-## Requirements
+## Yêu cầu
 - numpy
 - pandas
 - matplotlib
@@ -75,9 +75,10 @@ jupyter notebook bitcoin_price_prediction.ipynb
 - tensorflow
 - keras
 
-## Author
+## Tác giả
 TANG MINH VU
 
-## Acknowledgments
-- Course instructors of IT3190 (Nhập môn Học máy và Khai phá dữ liệu)
-- Bitstamp for providing the historical data
+## Lời cảm ơn
+- Giáo viên hướng dẫn môn IT3190 (Nhập môn Học máy và Khai phá dữ liệu)
+- Bitstamp cung cấp dữ liệu lịch sử
+
