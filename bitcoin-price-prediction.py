@@ -31,7 +31,7 @@ from sklearn.svm import SVR  # Lecture 11
 # %%
 # Tải dữ liệu
 print("Đang tải dữ liệu lịch sử Bitcoin...")
-df = pd.read_csv('btcusd_1-min_data.csv')
+df = pd.read_csv('/kaggle/input/bitcoin-historical-data/btcusd_1-min_data.csv')
 print(f"Kích thước dữ liệu: {df.shape}")
 
 # %%
